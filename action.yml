@@ -59,7 +59,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: "docker://ghcr.io/nicklasfrahm/scp-action:main"
+  image: "docker://ghcr.io/Briaker/scp-action:passphrase-debug"
   env:
     DIRECTION: ${{ inputs.direction }}
     SOURCE: ${{ inputs.source }}
