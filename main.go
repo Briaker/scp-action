@@ -173,7 +173,7 @@ func ConfigureAuthentication(key string, passphrase string, password string) []s
 	auth := make([]ssh.AuthMethod, 1)
 	if key != "" {
 		if passphrase != "" {
-			targetSigner, err := ssh.ParsePrivateKeyWithPassphrase([]byte(key), passphrase)
+			targetSigner, err := ssh.ParsePrivateKeyWithPassphrase(key, []byte(passphrase))
 		} else {
 			targetSigner, err := ssh.ParsePrivateKey([]byte(key))
 		}
