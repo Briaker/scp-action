@@ -174,7 +174,7 @@ func ConfigureAuthentication(key string, passphrase string, password string) []s
 	
 	if key != "" {
 		var err error
-		var targetSigner ssh.AuthMethod
+		var targetSigner ssh.Signer
 		
 		if passphrase != "" {
 			targetSigner, err = ssh.ParsePrivateKeyWithPassphrase([]byte(key), []byte(passphrase))
